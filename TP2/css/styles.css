@@ -175,6 +175,7 @@ body{
 .cardContainer{
     width: 300px;
     margin-right: 20px;
+    background: var(--color-arcoiris);
 }
 .card{
     display: flex;
@@ -237,6 +238,10 @@ body{
     line-height: 1.5em;
 }
 
+/* Hover */
+.cardContainer:hover .card{
+    transform: translateX(5px) translateY(-5px);
+}
 
 /* CARRUSEL */
 
@@ -326,9 +331,6 @@ body{
 .cardBiblioteca{
     display: flex;
     flex-direction: column;
-    box-shadow: 0 16px 16px 0 rgba(0,0,0,.08);
-    overflow: visible;
-    transition: .2s ease;
 }
 .card-ImgBiblioteca{
     width: 100%;
@@ -361,7 +363,7 @@ body{
 .cardBiblioteca:hover .nameTag{
     display: inline-block;
     transform: scale(1.0);
-    transition: 0.3s ease-out;
+    transition: 0.3s ease;
     top: -32;
     left: 0;
     max-width: 450px;
