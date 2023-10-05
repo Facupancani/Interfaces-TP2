@@ -1,0 +1,330 @@
+@font-face {
+    font-family: 'Avenir Black';
+    src: url(../fonts/Avenir-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Avenir Book';
+    src: url(../fonts/Avenir-Book.ttf);
+}
+
+@font-face {
+    font-family: 'Avenir Regular';
+    src: url(../fonts/Avenir-Regular.ttf);
+}
+
+:root{
+    --backround-color: #704242;
+
+    --color-primario: #0D0303;
+    --color-arcoiris:linear-gradient(to right, #CB487B, #D1B507 ,#5FAA5A ,#3193C7 );
+    
+    --fuente-h1:"FSP DEMO - TT Nrms Pr xtrBlck Regular", "FSP DEMO - TT Nrms Pr xtrBlck", 'FSP DEMO - TT Nrms Pr xtrBlck Extranegra';
+    --tamanio-h1:40px;
+    --fuente-h2:'Avenir Black';
+    --tamanio-h2: 20px;
+    --fuente-h4:'Avenir Regular';
+    --tamanio-h4:22px;
+    --fuente-textoChico:'Avenir Book';
+    --tamanio-textoChico:14px;
+}
+
+html{
+    background-color: var(--backround-color);
+}
+
+/* TEXTOS */
+
+.h1{
+    font-family: var(--fuente-h1);
+    font-size: var(--tamanio-h1);
+}
+
+.h2{
+    font-family:var(--fuente-h2);
+    font-size: var(--tamanio-h2);
+}
+
+.h4{
+    font-family: var(--fuente-h4);
+    font-size: var(--tamanio-h4);
+}
+
+
+.textoChico{
+    font-family:var(--fuente-textoChico);
+    font-size: var(--tamanio-textoChico);
+    color: #282725;
+}
+                                          /* ASSETS */
+
+        /* NAV */
+#logo{
+    width: 250px;
+    height: 20px;
+    background: no-repeat url(/resources/icos/logo.svg) 50%;
+}
+
+#barraBusqueda{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 460px;
+    height: 40px;
+    background: white;
+    border-radius: 8px;
+    }
+#barraBusqueda span{
+    opacity: 50%;
+    margin-left: 15px;
+}
+#lupa{
+    background: no-repeat url(/resources/icos/lupa.svg) 50%;
+    height: 22px;
+    width: 22px;
+    margin-right: 15px;
+}
+      
+        
+        /* BODY */
+        
+        
+        
+        
+/* CARD */
+        
+.cardContainer{
+    width: 300px;
+    margin-right: 20px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 16px 16px 0 rgba(0,0,0,.08);
+    overflow: visible;
+    transition: .2s ease;
+}
+.card-Img{
+    height: 170px;
+    width: 300px;
+    overflow: hidden;
+}
+.card .data{
+    padding: 15px 16px 13px;
+    width: 100%;
+    background: #fff;
+    position: relative;
+    box-sizing: border-box;
+}
+.card .data-category-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 80%;
+}
+.card .data-category {
+    max-width: calc(100% - 40px);
+}
+.card .data .playBtn {
+    display: flex;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}
+.playBtn{
+    background-color: #080008;
+    height: 56px;
+    width: 56px;
+    justify-content: center;
+    align-items: center;
+}
+.playBtn .icon.links {
+    background-image: url(/resources/icos/flecha.svg);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+.card .titulo{
+    color: #282725;
+    font-size: 22px;
+    white-space: nowrap;
+    font-weight: 800;
+    width: 80%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 1.5em;
+    line-height: 1.5em;
+}
+
+
+/* CARRUSEL */
+
+.carrusel{
+    display: block;
+    box-sizing: border-box;
+}
+.containerMovedizo{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    touch-action: pan-y;
+}
+.gameContainer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    width: 100%;
+    height: 48px;
+    cursor: pointer;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: ease-in-out .2s;
+    transition: .2s ease-in-out;
+    outline: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 10;
+    background-repeat: no-repeat;
+}
+.left{
+    position: relative;
+    left: 10%;
+}
+.right{
+    position: relative;
+    right: 10%;
+}
+.slide-btn{
+    background: no-repeat url(/resources/icos/chevron_right.svg) 50%;
+    content: "";
+    height: 48px;
+    width: 48px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    background-color: #fff;
+    opacity: .75;
+    border-radius: 5px;
+}
+.left{
+    transform: scaleX(-1);
+}
+
+
+
+
+
+/* CARD BIBLIOTECA */
+
+.cardContainerBiblioteca{
+    width: 450px;
+    height: 250px;
+    margin-right: 20px;
+}
+.cardBiblioteca{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 16px 16px 0 rgba(0,0,0,.08);
+    overflow: visible;
+    transition: .2s ease;
+}
+.card-ImgBiblioteca{
+    width: 100%;
+    height: 100%;
+}
+.nameTag{
+    position: relative; 
+    top: -43px;
+    right: -8px;
+    white-space: nowrap;
+}
+.cardContainerBiblioteca span{
+    color: white;
+    background-color: rgba(13, 3, 3, 0.8);
+    max-width: 260px;
+    max-height: 32px;
+}
+
+
+
+
+
+/* PUBLICIDAD */
+
+#publicidad{
+    display: flex;
+    flex-direction: column;
+    display: block;
+    width: 350px;
+    height: 730px;
+    overflow: visible;
+    background-image: url(/resources/publicidad.svg);
+}
+#publicidad1{
+    width: 350px;
+    height: 730px;
+}
+#publicidad img{
+    background: no-repeat url(/resources/publicidad.svg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
