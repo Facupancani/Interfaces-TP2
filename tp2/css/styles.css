@@ -84,7 +84,7 @@ html {
   }
   .menuCategoriasul li {
     display: inline-block;
-  margin-right: 55px; /* Espacio entre elementos */
+  margin-right: 55px; 
     
     
     
@@ -98,7 +98,7 @@ html {
 
 .borde {
     border-radius: 500px;
-    background-image: linear-gradient(0deg, rgba(203.00000309944153, 72.00000330805779, 123.0000002682209, 1) 4.6875%, rgba(209.00000274181366, 181.0000044107437, 7.000000057742, 1) 46.169471740722656%, rgba(95.00000193715096, 170.0000050663948, 90.00000223517418, 1) 60.41666865348816%, rgba(49.00000087916851, 147.00000643730164, 199.0000033378601, 1) 81.77083134651184%);
+    background-image: var(--color-arcoiris);
     width: 55px;
     height: 55px;
    
