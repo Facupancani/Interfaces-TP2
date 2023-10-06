@@ -80,7 +80,7 @@ body{
 #logo{
     width: 250px;
     height: 20px;
-    background: no-repeat url(../resources/icos/logo.svg) 50%;
+    background: no-repeat url(../resources/icos/simbolos/logo.svg) 50%;
 }
 
 #barraBusqueda{
@@ -98,7 +98,7 @@ body{
     margin-left: 15px;
 }
 #lupa{
-    background: no-repeat url(../resources/icos/lupa.svg) 50%;
+    background: no-repeat url(../resources/icos/simbolos/lupa.svg) 50%;
     height: 22px;
     width: 22px;
     margin-right: 15px;
@@ -196,7 +196,7 @@ body{
 #flechasCategoria button{
     width: 20px;
     height: 35px;
-    background: no-repeat url(../resources/icos/flechaDerCategoria.svg) 50%;
+    background: no-repeat url(../resources/icos/simbolos/flechaDerCategoria.svg) 50%;
     border: none;
     top: -60px;
     position: relative;
@@ -260,7 +260,7 @@ body{
     align-items: center;
 }
 .playBtn .icon.links {
-    background-image: url(../resources/icos/flecha.svg);
+    background-image: url(../resources/icos/simbolos/flecha.svg);
     background-repeat: no-repeat;
     width: 35px;
     height: 35px;
@@ -332,7 +332,7 @@ body{
     background-repeat: no-repeat;
 }
 .slide-btn{
-    background: no-repeat url(../resources/icos/chevron_right.svg) 50%;
+    background: no-repeat url(../resources/icos/simbolos/chevron_right.svg) 50%;
     content: "";
     height: 48px;
     width: 48px;
@@ -433,15 +433,12 @@ body{
     width: 350px;
     height: 730px;
     overflow: visible;
-    background-image: url(../resources/publicidad.svg);
 }
 #publicidad1{
     width: 350px;
     height: 730px;
 }
-#publicidad img{
-    background: no-repeat url(../resources/imagenes/otros/publicidad1.jpg);
-}
+
 
 footer{
     background-color: var(--color-primario);
