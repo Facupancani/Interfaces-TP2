@@ -13,17 +13,15 @@
     src: url(../fonts/Avenir-Regular.ttf);
 }
 
-:root {
+:root{
     --backround-color: #704242;
 
     --color-primario: #0D0303;
-    --color-secundario: #CC0F76;
     --color-arcoiris:linear-gradient(to right, #CB487B, #D1B507 ,#5FAA5A ,#3193C7 );
     --color-degrade: linear-gradient(180deg, #CC0F76 32.81%, #810047 100%);
     --color-degradeV2: linear-gradient(180deg, #CC0F76 4.69%, #AA0860 42.71%, #810047 81.77%);
     --color-degradeTerciario: linear-gradient(180deg, #FCE112 67.71%, #CBB400 94.79%);
     
-
     --fuente-h1:"FSP DEMO - TT Nrms Pr xtrBlck Regular", "FSP DEMO - TT Nrms Pr xtrBlck", 'FSP DEMO - TT Nrms Pr xtrBlck Extranegra';
     --tamanio-h1:40px;
     --fuente-h2:'Avenir Black';
@@ -32,12 +30,11 @@
     --tamanio-h4:22px;
     --fuente-textoChico:'Avenir Book';
     --tamanio-textoChico:14px;
-    --fuente-textoBotones:'Avenir Black';
-    --tamanio-textoBotones:11px;
-
+    --fuente-textoBody:'Avenir Book';
+    --tamanio--textoBody: 19px;
 }
 
-html {
+html{
     background-color: var(--backround-color);
 }
 body{
@@ -47,38 +44,44 @@ body{
 
 /* TEXTOS */
 
-.h1 {
+.h1{
     font-family: var(--fuente-h1);
     font-size: var(--tamanio-h1);
 }
 
-.h2 {
-    font-family: var(--fuente-h2);
+.h2{
+    font-family:var(--fuente-h2);
     font-size: var(--tamanio-h2);
 }
 
-.h4 {
+.h4{
     font-family: var(--fuente-h4);
     font-size: var(--tamanio-h4);
 }
 
 
-.textoChico {
-    font-family: var(--fuente-textoChico);
+.textoChico{
+    font-family:var(--fuente-textoChico);
     font-size: var(--tamanio-textoChico);
     color: #282725;
 }
 
-/* ASSETS */
-
-/* NAV */
-#logo {
-    width: 250px;
-    height: 20px;
-    background: no-repeat url(/resources/icos/logo.svg) 50%;
+.textoBody{
+    font-family: var(--fuente-textoBody);
+    font-size: var(--tamanio--textoBody);
+    color: white;
 }
 
-#barraBusqueda {
+                                          /* ASSETS */
+
+        /* NAV */
+#logo{
+    width: 250px;
+    height: 20px;
+    background: no-repeat url(../resources/icos/logo.svg) 50%;
+}
+
+#barraBusqueda{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -87,82 +90,89 @@ body{
     height: 40px;
     background: white;
     border-radius: 8px;
-}
-
-#barraBusqueda span {
+    }
+#barraBusqueda span{
     opacity: 50%;
     margin-left: 15px;
 }
-
-#lupa {
-    background: no-repeat url(/resources/icos/lupa.svg) 50%;
+#lupa{
+    background: no-repeat url(../resources/icos/lupa.svg) 50%;
     height: 22px;
     width: 22px;
     margin-right: 15px;
 }
-
-
+      
 /* CATEGORIAS */
 .menuCategorias {
-    display: flex;
-    justify-content: space-between;
-    
+    white-space: nowrap; 
     max-width: 100%;
- }
-  
- .menuCategoriasul {
-     list-style-type: none;
-     padding: 0;
-     margin: 0;
- 
+    height: 75px;
+    overflow-y: visible;
+}
+ #catContainer{
+     max-width: 1440px;
+     margin-left: 30px;
+     overflow-x: hidden;
+    }
+    #menuCategoriasul {
+        list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 85px;
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s ease;
    }
-   .menuCategoriasul li {
-    display: inline-block;
-    margin-right: 55px; 
+   #menuCategoriasul li {
+    margin-right: 100px; 
    }
  
    .circulo {
-    width: 55px;
-    height: 55px;
+    width: 70px;
+    height: 70px;
     position: absolute;
-
 }
 
 .borde {
     border-radius: 500px;
     background-image: var(--color-arcoiris);
-    width: 55px;
-    height: 55px;
+    width: 73px;
+    height: 75px;
     position: absolute;
-    
+    left: 0.5px;
+    top: 0px;
 }
 
 .centro {
     border-radius: 500px;
     background-color: rgba(12.750000189989805, 3.081249911338091, 3.081249911338091, 1);
-    width: 51px;
-    height: 51px;
+    width: 70px;
+    height: 70px;
     position: absolute;
     left: 2px;
     top: 2px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .contenedorCategoria {
     background-color: var(--color-primario);
     opacity: 0.8999999761581421;
-    width: 65px;
-    height: 15px;
+    width: 70px;
+    height: 20px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     max-width: 100%;
     margin-top: 48px;
+    margin-left: 2px;
 }
 
 .textoCategoria {
-    margin-bottom: 5px;
-    margin-left: 3px;
+    margin-top: 60px;
+    margin-left: 7px;
     color: #fff;
     font-size: var(--tamanio-texto-chico);
 
@@ -170,73 +180,85 @@ body{
 
 .imgCategoria {
     max-width: 100%;
-
-
+}
+.categoria:hover .imgCategoria{
+    transform: scale(1.5);
+    overflow-y: visible;
 }
 
-
-/* BODY */
-
-
-
-
+#flechasCategoria {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#flechasCategoria button{
+    width: 20px;
+    height: 35px;
+    background: no-repeat url(../resources/icos/flechaDerCategoria.svg) 50%;
+    border: none;
+    top: -60px;
+    position: relative;
+}
+#flechaCategIzquierda{
+    transform: scaleX(-1);
+    top: 60px;
+    position: relative;
+}
+        
+        /* BODY */
+        
+        
+        
+        
 /* CARD */
-
-.cardContainer {
+        
+.cardContainer{
     width: 300px;
     margin-right: 20px;
     background: var(--color-arcoiris);
 }
-
-.card {
+.card{
     display: flex;
     flex-direction: column;
-    box-shadow: 0 16px 16px 0 rgba(0, 0, 0, .08);
+    box-shadow: 0 16px 16px 0 rgba(0,0,0,.08);
     overflow: visible;
     transition: .2s ease;
 }
-
-.card-Img {
+.card-Img{
     height: 170px;
     width: 300px;
     overflow: hidden;
 }
-
-.card .data {
+.card .data{
     padding: 15px 16px 13px;
     width: 100%;
     background: #fff;
     position: relative;
     box-sizing: border-box;
 }
-
 .card .data-category-container {
     overflow: hidden;
     white-space: nowrap;
     width: 80%;
 }
-
 .card .data-category {
     max-width: calc(100% - 40px);
 }
-
 .card .data .playBtn {
     display: flex;
     position: absolute;
     top: 12px;
     right: 10px;
 }
-
-.playBtn {
+.playBtn{
     background-color: #080008;
     height: 56px;
     width: 56px;
     justify-content: center;
     align-items: center;
 }
-
 .playBtn .icon.links {
-    background-image: url(/resources/icos/flecha.svg);
+    background-image: url(../resources/icos/flecha.svg);
     background-repeat: no-repeat;
     width: 35px;
     height: 35px;
@@ -244,8 +266,7 @@ body{
     align-items: center;
     margin-left: 15px;
 }
-
-.card .titulo {
+.card .titulo{
     color: #282725;
     font-size: 22px;
     white-space: nowrap;
@@ -264,12 +285,14 @@ body{
 
 /* CARRUSEL */
 
-.carrusel {
+.carrusel{
     display: block;
     box-sizing: border-box;
 }
-
-.containerMovedizo {
+.carruselChico{
+    max-width: 1400px;
+}
+.containerMovedizo{
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -279,28 +302,19 @@ body{
     z-index: 1;
     touch-action: pan-y;
 }
-
-.gameContainer {
+#gameContainer{
     position: relative;
     width: 100%;
     height: 100%;
-    z-index: 1;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-transition-property: -webkit-transform;
-    transition-property: -webkit-transform;
-    -o-transition-property: transform;
-    transition-property: transform;
-    transition-property: transform, -webkit-transform;
-    -webkit-box-sizing: content-box;
     box-sizing: content-box;
+    transition: 0.4s ease;
 }
-
-.botones {
+.botones{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+    
     width: 100%;
     height: 48px;
     cursor: pointer;
@@ -315,19 +329,8 @@ body{
     z-index: 10;
     background-repeat: no-repeat;
 }
-
-.left {
-    position: relative;
-    left: 10%;
-}
-
-.right {
-    position: relative;
-    right: 10%;
-}
-
-.slide-btn {
-    background: no-repeat url(/resources/icos/chevron_right.svg) 50%;
+.slide-btn{
+    background: no-repeat url(../resources/icos/chevron_right.svg) 50%;
     content: "";
     height: 48px;
     width: 48px;
@@ -338,8 +341,7 @@ body{
     opacity: .75;
     border-radius: 5px;
 }
-
-.left {
+.left{
     transform: scaleX(-1);
 }
 
@@ -349,34 +351,27 @@ body{
 
 /* CARD BIBLIOTECA */
 
-.cardContainerBiblioteca {
+.cardContainerBiblioteca{
     width: 450px;
     height: 250px;
     margin-right: 20px;
 }
-
-.cardBiblioteca {
+.cardBiblioteca{
     display: flex;
     flex-direction: column;
-    box-shadow: 0 16px 16px 0 rgba(0, 0, 0, .08);
-    overflow: visible;
-    transition: .2s ease;
 }
-
-.card-ImgBiblioteca {
+.card-ImgBiblioteca{
     width: 100%;
     height: 100%;
 }
-
-.nameTag {
-    position: relative;
+.nameTag{
+    position: relative; 
     top: -43px;
     right: -8px;
     white-space: nowrap;
     max-width: 260px;
     height: 32px;
 }
-
 .cardContainerBiblioteca span{
     position: absolute;
     top: 0;
@@ -387,6 +382,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
     color: white;
     background-color: rgba(13, 3, 3, 0.8);
 }
@@ -425,23 +421,67 @@ body{
     fill: black;
 }
 
+
 /* PUBLICIDAD */
 
-#publicidad {
+#publicidad{
     display: flex;
     flex-direction: column;
     display: block;
     width: 350px;
     height: 730px;
     overflow: visible;
-    background-image: url(/resources/publicidad.svg);
+    background-image: url(../resources/publicidad.svg);
 }
-
-#publicidad1 {
+#publicidad1{
     width: 350px;
     height: 730px;
 }
-
-#publicidad img {
-    background: no-repeat url(/resources/publicidad.svg);
+#publicidad img{
+    background: no-repeat url(../resources/imagenes/otros/publicidad1.jpg);
 }
+
+footer{
+    background-color: var(--color-primario);
+}
+footer .queSomos{
+    width: 680px;
+    height: 290px;
+}
+#lineaColor {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
