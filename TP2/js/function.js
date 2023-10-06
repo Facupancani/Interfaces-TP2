@@ -1,31 +1,16 @@
-const carrusel = document.getElementById('gameContainer');
-const derC = document.getElementById('botonDerechaChico');
-const izqC = document.getElementById('botonIzquierdaChico');
-const derG = document.getElementById('botonDerechaG');
-const izqG = document.getElementById('botonIzquierdaG');
-let categorias = document.getElementById('menuCategoriasul')
-let izqCat = document.getElementById('flechaCategIzquierda');
-let derCat = document.getElementById('flechaCategDerecha');
+const card = document.getElementsByClassName(cardContainer);
+const der = document.getElementById(right);
+const izq = document.getElementById(left);
 
+der.addEventListener('click', () => {
+    for (const cardContainer of cardContainers) {
+        card.style.transform = 'translate(-20px, 0px)';
+    }
+});
 
-derC.addEventListener('click', () => {
-    carrusel.style.transform = `translateX(-1050px)`;
-});
-izqC.addEventListener('click', () => {
-    carrusel.style.transform = `translateX(0px)`;
-});
-/*
-derG.addEventListener('click', () => {
-    carrusel.style.transform = `translateX(-3050px)`;
-});
-izqG.addEventListener('click', () => {
-    carrusel.style.transform = `translateX(0px)`;
-});
-*/
-
-derCat.addEventListener('click', () => {
-    categorias.style.transform = `translateX(-1000px)`;
-});
-izqCat.addEventListener('click', () => {
-    categorias.style.transform = `translateX(0px)`;
-});
+function slideDer(){
+    document.getElementsByClassName(cardContainer).style.left=positionx -20;
+};
+function slideIzq(){
+    document.getElementsByClassName(cardContainer).style.transform = 'translateX(-100px)';
+};
