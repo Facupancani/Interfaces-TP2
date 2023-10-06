@@ -17,7 +17,6 @@
     --backround-color: #704242;
 
     --color-primario: #0D0303;
-    --color-secundario: #CC0F76;
     --color-arcoiris:linear-gradient(to right, #CB487B, #D1B507 ,#5FAA5A ,#3193C7 );
     --color-degrade: linear-gradient(180deg, #CC0F76 32.81%, #810047 100%);
     --color-degradeV2: linear-gradient(180deg, #CC0F76 4.69%, #AA0860 42.71%, #810047 81.77%);
@@ -31,8 +30,10 @@
     --tamanio-h4:22px;
     --fuente-textoChico:'Avenir Book';
     --tamanio-textoChico:14px;
+
     --fuente-textoBotones:'Avenir Black';
     --tamanio-textoBotones:11px;
+
     --fuente-textoBody:'Avenir Book';
     --tamanio--textoBody: 19px;
 }
@@ -68,6 +69,7 @@ body{
     font-size: var(--tamanio-textoChico);
     color: #282725;
 }
+
 .textoBody{
     font-family: var(--fuente-textoBody);
     font-size: var(--tamanio--textoBody);
