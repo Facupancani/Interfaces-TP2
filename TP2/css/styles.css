@@ -30,6 +30,10 @@
     --tamanio-h4:22px;
     --fuente-textoChico:'Avenir Book';
     --tamanio-textoChico:14px;
+
+    --fuente-textoBotones:'Avenir Black';
+    --tamanio-textoBotones:11px;
+
     --fuente-textoBody:'Avenir Book';
     --tamanio--textoBody: 19px;
 }
