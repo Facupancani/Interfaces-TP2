@@ -17,8 +17,13 @@
     --backround-color: #704242;
 
     --color-primario: #0D0303;
+    --color-secundario: #CC0F76;
     --color-arcoiris:linear-gradient(to right, #CB487B, #D1B507 ,#5FAA5A ,#3193C7 );
+    --color-degrade: linear-gradient(180deg, #CC0F76 32.81%, #810047 100%);
+    --color-degradeV2: linear-gradient(180deg, #CC0F76 4.69%, #AA0860 42.71%, #810047 81.77%);
+    --color-degradeTerciario: linear-gradient(180deg, #FCE112 67.71%, #CBB400 94.79%);
     
+
     --fuente-h1:"FSP DEMO - TT Nrms Pr xtrBlck Regular", "FSP DEMO - TT Nrms Pr xtrBlck", 'FSP DEMO - TT Nrms Pr xtrBlck Extranegra';
     --tamanio-h1:40px;
     --fuente-h2:'Avenir Black';
@@ -27,8 +32,8 @@
     --tamanio-h4:22px;
     --fuente-textoChico:'Avenir Book';
     --tamanio-textoChico:14px;
-    --fuente-textoBody:'Avenir Book';
-    --tamanio--textoBody: 19px;
+    --fuente-textoBotones:'Avenir Black';
+    --tamanio-textoBotones:11px;
 }
 
 html{
@@ -62,20 +67,13 @@ body{
     font-size: var(--tamanio-textoChico);
     color: #282725;
 }
-
-.textoBody{
-    font-family: var(--fuente-textoBody);
-    font-size: var(--tamanio--textoBody);
-    color: white;
-}
-
                                           /* ASSETS */
 
         /* NAV */
 #logo{
     width: 250px;
     height: 20px;
-    background: no-repeat url(../resources/icos/logo.svg) 50%;
+    background: no-repeat url(/resources/icos/logo.svg) 50%;
 }
 
 #barraBusqueda{
@@ -93,7 +91,7 @@ body{
     margin-left: 15px;
 }
 #lupa{
-    background: no-repeat url(../resources/icos/lupa.svg) 50%;
+    background: no-repeat url(/resources/icos/lupa.svg) 50%;
     height: 22px;
     width: 22px;
     margin-right: 15px;
@@ -101,75 +99,65 @@ body{
       
 /* CATEGORIAS */
 .menuCategorias {
+    display: flex;
+    justify-content: space-between;
     white-space: nowrap; 
     max-width: 100%;
-    height: 75px;
-    overflow-y: visible;
-}
- #catContainer{
-     max-width: 1440px;
-     margin-left: 30px;
-     overflow-x: hidden;
-    }
-    #menuCategoriasul {
-        list-style-type: none;
-    padding: 0;
-    margin: 0;
-    height: 85px;
-    display: flex;
-    flex-direction: row;
-    transition: 0.3s ease;
+ }
+  
+ .menuCategoriasul {
+     list-style-type: none;
+     padding: 0;
+     margin: 0;
+ 
    }
-   #menuCategoriasul li {
-    margin-right: 100px; 
+   .menuCategoriasul li {
+    display: inline-block;
+    margin-right: 55px; 
    }
  
    .circulo {
-    width: 70px;
-    height: 70px;
-    position: absolute;
+    width: 55px;
+    height: 55px;
+
 }
 
 .borde {
     border-radius: 500px;
     background-image: var(--color-arcoiris);
-    width: 73px;
-    height: 75px;
-    position: absolute;
-    left: 0.5px;
+    width: 55px;
+    height: 55px;
+
+    left: 0px;
     top: 0px;
 }
 
 .centro {
     border-radius: 500px;
     background-color: rgba(12.750000189989805, 3.081249911338091, 3.081249911338091, 1);
-    width: 70px;
-    height: 70px;
-    position: absolute;
+    width: 51px;
+    height: 51px;
+
     left: 2px;
     top: 2px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
 }
 
 .contenedorCategoria {
     background-color: var(--color-primario);
     opacity: 0.8999999761581421;
-    width: 70px;
-    height: 20px;
+    width: 65px;
+    height: 15px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     max-width: 100%;
     margin-top: 48px;
-    margin-left: 2px;
 }
 
 .textoCategoria {
-    margin-top: 60px;
-    margin-left: 7px;
+    margin-bottom: 5px;
+    margin-left: 3px;
     color: #fff;
     font-size: var(--tamanio-texto-chico);
 
@@ -177,29 +165,8 @@ body{
 
 .imgCategoria {
     max-width: 100%;
-}
-.categoria:hover .imgCategoria{
-    transform: scale(1.5);
-    overflow-y: visible;
-}
 
-#flechasCategoria {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-#flechasCategoria button{
-    width: 20px;
-    height: 35px;
-    background: no-repeat url(../resources/icos/flechaDerCategoria.svg) 50%;
-    border: none;
-    top: -60px;
-    position: relative;
-}
-#flechaCategIzquierda{
-    transform: scaleX(-1);
-    top: 60px;
-    position: relative;
+
 }
         
         /* BODY */
@@ -255,7 +222,7 @@ body{
     align-items: center;
 }
 .playBtn .icon.links {
-    background-image: url(../resources/icos/flecha.svg);
+    background-image: url(/resources/icos/flecha.svg);
     background-repeat: no-repeat;
     width: 35px;
     height: 35px;
@@ -286,9 +253,6 @@ body{
     display: block;
     box-sizing: border-box;
 }
-.carruselChico{
-    max-width: 1400px;
-}
 .containerMovedizo{
     margin-left: auto;
     margin-right: auto;
@@ -299,13 +263,20 @@ body{
     z-index: 1;
     touch-action: pan-y;
 }
-#gameContainer{
+.gameContainer{
     position: relative;
     width: 100%;
     height: 100%;
+    z-index: 1;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    transition: 0.4s ease;
 }
 .botones{
     display: flex;
@@ -326,8 +297,16 @@ body{
     z-index: 10;
     background-repeat: no-repeat;
 }
+.left{
+    position: relative;
+    left: 10%;
+}
+.right{
+    position: relative;
+    right: 10%;
+}
 .slide-btn{
-    background: no-repeat url(../resources/icos/chevron_right.svg) 50%;
+    background: no-repeat url(/resources/icos/chevron_right.svg) 50%;
     content: "";
     height: 48px;
     width: 48px;
@@ -395,7 +374,28 @@ body{
     height: 43px;
 }
 
-
+/* TAGS */
+#cardTag{
+    background-image: var(--color-degradeV2);
+    width: 94px;
+    height: 23px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: white
+}
+#cardTag span{
+    font-family: var(--fuente-textoBotones);
+    font-size: var(--tamanio-textoBotones);
+}
+#cardTag:hover{
+    background-image: var(--color-degradeTerciario);
+    color: black;
+}
+#cardTag:hover #carritoIco{
+    fill: black;
+}
 
 /* PUBLICIDAD */
 
@@ -406,26 +406,18 @@ body{
     width: 350px;
     height: 730px;
     overflow: visible;
-    background-image: url(../resources/publicidad.svg);
+    background-image: url(/resources/publicidad.svg);
 }
 #publicidad1{
     width: 350px;
     height: 730px;
 }
 #publicidad img{
-    background: no-repeat url(../resources/imagenes/otros/publicidad1.jpg);
+    background: no-repeat url(/resources/publicidad.svg);
 }
 
-footer{
-    background-color: var(--color-primario);
-}
-footer .queSomos{
-    width: 680px;
-    height: 290px;
-}
-#lineaColor {
-    width: 100%;
-}
+
+
 
 
 
