@@ -444,10 +444,20 @@ body{
 
 footer{
     background-color: var(--color-primario);
+    margin: -8px;
+    width: 100%;
+    height: 505px;
 }
-footer .queSomos{
+footer .lorem{
+    display: flex;
+    align-items: center;
     width: 680px;
     height: 290px;
+}
+footer hr{
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 205px;
 }
 #lineaColor {
     width: 100%;
